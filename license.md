@@ -1,4 +1,4 @@
-SOFTWARE LICENSE
+Software License
 ================
 
 ### Copyright (c) 2013, Peter McKay
