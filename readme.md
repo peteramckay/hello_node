@@ -15,23 +15,3 @@ Fuller installation instructions, including setup for OS X and Windows, are avai
 
 
 
-
-
-
-
-
-CHANGELOG
-
-12/07/13: Set up several files for project. Ran simple nodeserver1.js server and got 'hello world' response back.
-
-12/8/13: Did minor tweaks, pushed to GitHub from desktop to make sure everything is working OK.
-
-12/9/13: Added a www folder with a simple html file inside for testing purposes. Will use this stuff later to make sure that the http server is serving up Web pages as it should.
-
-UPCOMING
-
-    Set it up as a public Web server
-    Add video serving capabilities
-    Install on a cloud-based server
-
-
