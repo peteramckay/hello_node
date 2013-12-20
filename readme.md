@@ -1,19 +1,20 @@
 Hello, Node: A Web Server
 ==========================
 
-In this project, I'm making a basic node.js server. Software is open source under MIT License. See file license.md for full details.
+In this project, I'm making a basic node.js server. Software is open source under MIT license.
 
-Very important: Prior to working with/testing this script on my machine running Ubuntu v12.04, I had to run a few commands to install Node.js and the npm package manager for it. First was...
+Very important: Prior to running the code in the main file `hello_node.js`, node.js and the npm package manager must be installed on your machine. A few different methods to do this are documented in various places around on the Web. After some trial and error, I ultimately decided to install from a repo maintained by developer Chris Lea, as described at http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10
 
-`sudo apt-get install nodejs`
+	sudo apt-get install python-software-properties python g++ make
+	sudo add-apt-repository ppa:chris-lea/node.js
+	sudo apt-get update
+	sudo apt-get install nodejs
 
-Then, one for the package manager...
+Chief advantage of this method, as of this writing on 12/20/13, is that it added the most updated version of Node.js (v0.10.24) to my machine running Ubuntu 12.04. By comparison, the simpler method described at nodejs.org using the command `sudo apt-get install nodejs`, installed an older version of Node.js (v0.6). That older version was incompatible with certain node.js add-on modules, including the Express framework for web apps that I'm interested in including on my server.
 
-`sudo apt-get install npm`
+(Note: A full copy of node.js v10.24 is included in this repo as well, but that's really just for the sake of study, in case I want to look through the source code for learning purposes.)
 
-Fuller installation instructions, including setup for OS X and Windows, are available on Joyent Inc.'s Node.js wiki at https://github.com/joyent/node/wiki/installation
-
-To run the server, execute the following command...
+Once node.js and npm were installed on my machine, I ran the following command within the 'hello_node' repo to start my node.js server...
 
 `node hello_node.js`
 
