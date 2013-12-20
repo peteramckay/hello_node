@@ -29,8 +29,8 @@ THE SOFTWARE.
 var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Howdy!\n');
+  res.end('Out of many, one people.\n');
 }).listen(1337, '127.0.0.1');
-console.log('The server is running like a mofo at http://127.0.0.1:1337/');
+console.log('Fiyah! The server is running at http://127.0.0.1:1337/');
 
 
