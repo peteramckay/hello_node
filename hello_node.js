@@ -26,11 +26,12 @@ THE SOFTWARE.
 
 
 
-var http = require('http');
+var http = require('http'), net = require ('net'), fs = require ('fs'), express = require('express'); 
+// Declaring variables for several modules here, including a few that may be of use later.
+
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Out of many, one people.\n');
+  res.end('Hello, Node!\n');
 }).listen(1337, '127.0.0.1');
-console.log('Fiyah! The server is running at http://127.0.0.1:1337/');
-
+console.log('Eureka! Server is running at http://127.0.0.1:1337/');
 
