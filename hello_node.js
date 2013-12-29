@@ -25,22 +25,18 @@ THE SOFTWARE.
 */
 
 
+var http = require('http'),
+    url = require('url'); // Requiring some modules here. Script below doesn't really make use of use the 'url' module yet, but we'll want to do so later. 
 
-var http = require('http'), 
-    net = require ('net'), 
-    fs = require ('fs'), 
-    express = require('express'),
-    app = express (),
-    httpServer = http.createServer(app); 
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hiya!\n');
+}).listen(1337, '127.0.0.1');
+console.log('The server is running like Usain Bolt at http://127.0.0.1:1337/');
 
-// Declaring variables for several modules here. Modules fs and net aren't really put to any use below, but I may want to experiment with them later.
 
-app.configure (function () {
-  app.set('port', 3000);
-  app.use(express.static(__dirname + '/www'));
-});
 
-httpServer.listen(app.get('port'), function() {
-  console.log("Express server is rapt, listening on localport:", httpServer.address().port);
-});
+
+
+
 
