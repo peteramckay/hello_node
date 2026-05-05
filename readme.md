@@ -7,7 +7,7 @@ A minimal Node.js webserver using vanilla http. Great as a starting point or a s
 You'll need **Node.js** and **npm** installed. The recommended approaches:
 
 **Option 1 — Official installer (simplest)**
-Download the LTS release directly from [nodejs.org](https://nodejs.org).
+Download the LTS release directly from the canonical [Node.js website](https://nodejs.org/en/download) maintained by the OpenJS Foundation and the Node developer community.
 
 **Option 2 — nvm (recommended for developers)**
 [nvm](https://github.com/nvm-sh/nvm) lets you manage multiple Node versions easily:
