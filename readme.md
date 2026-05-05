@@ -1,24 +1,68 @@
-Hello, Node: A Web Server
-==========================
+# Hello, Node: A Web Server
 
-In this project, I'm making a basic Node.js server. Software is open source under MIT license.
+A minimal Node.js webserver using vanilla http. Great as a starting point or a sanity check that your environment is set up correctly. Open source under MIT license.
 
-Very important: Prior to running the code in the main file `hello_node.js`, Node.js and the npm package manager must be installed on your machine. A few different methods to do this are documented in various places around on the Web. After some trial and error, I ultimately decided to install from a repo maintained by developer Chris Lea, as described at http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10
+## Prerequisites
 
-	sudo apt-get install python-software-properties python g++ make
-	sudo add-apt-repository ppa:chris-lea/node.js
-	sudo apt-get update
-	sudo apt-get install nodejs
+You'll need **Node.js** and **npm** installed. The recommended approaches:
 
-Chief advantage of this method, as of this writing on 12/28/13, is that it added the most updated version of Node.js (v0.10.24) to my machine running Ubuntu 12.04. By comparison, the simpler method described at nodejs.org using the command `sudo apt-get install nodejs`, installed an older version of Node.js (v0.6). That older version was incompatible with certain node.js add-on modules, including the Express web application framework (http://expressjs.com/).
+**Option 1 — Official installer (simplest)**
+Download the LTS release directly from [nodejs.org](https://nodejs.org).
 
-(Note: A full copy of node.js v10.24 is included in this repo as well, but that's really just for the sake of study, in case I want to look through the source code for learning purposes.)
+**Option 2 — nvm (recommended for developers)**
+[nvm](https://github.com/nvm-sh/nvm) lets you manage multiple Node versions easily:
 
-Installed Express module using this command:
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install --lts
+```
 
-`npm install express`
+**Option 3 — NodeSource (Ubuntu/Debian)**
 
-Once node.js, npm, and Express were installed on my machine, I ran the following command within the 'hello_node' repo to start my node.js server...
+```bash
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
-`node hello_node.js`
+Verify your installation with:
 
+```bash
+node -v
+npm -v
+```
+
+## Running the server
+
+Clone the repo, then start the server:
+
+```bash
+node hello_node.js
+```
+
+You should see:
+
+```
+Server running at http://127.0.0.1:1337/
+```
+
+Open that URL in your browser (or `curl http://127.0.0.1:1337/`) and you'll get a friendly greeting back.
+
+You can also use the npm start script:
+
+```bash
+npm start
+```
+
+## Configuration
+
+The host and port can be overridden with environment variables:
+
+```bash
+PORT=3000 node hello_node.js
+```
+
+## About This Project
+
+This started as a bare-bones experiment with Node's built-in `http` module — no frameworks, no dependencies. It's intentionally simple. The code uses the `url` module as a foundation for parsing request URLs, which is a natural next step if you want to add routing.
+
+For a more full-featured starting point, take a look at [Express](https://expressjs.com/).
